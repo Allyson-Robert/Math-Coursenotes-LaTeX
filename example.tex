@@ -1,0 +1,69 @@
+% Preamble is tailored for article class
+\documentclass{uhcourse}
+
+% Dummy text
+\usepackage{lipsum}
+
+% HEADER INFORMATION: Edit title, author, and date fields
+\title{Title}
+\author{Author Name}
+\date{\today}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ACTUAL DOCUMENT STARTS HERE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\clearpage
+\hypertarget{contents}{}
+\thispagestyle{fancy}
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\section{Example of custom environments}
+\lipsum[1]
+\begin{example}{Example Title}
+    Example Text
+    \lipsum[66]
+\end{example}
+
+
+\begin{definition}{Definition Title}
+    Definition Text
+    \lipsum[66]
+\end{definition}
+
+\begin{exercise}[Short Exercise]{Exercise Header}
+    This is an exercise
+    \lipsum[66]
+\end{exercise}
+
+\begin{theorem}[thmlabel]{Theorem name}
+    \lipsum[66]
+\end{theorem}
+
+\begin{proof}{thmlabel}
+    \lipsum[66]
+\end{proof}
+
+The following is a simple multicolumn enumeration, only the number of columns can be set.
+\begin{enumulti}{2}
+    \item{item}
+    \item{item}
+    \item{item}
+    \item{item}
+\end{enumulti}
+
+
+\listofexercises
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END OF DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
