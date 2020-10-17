@@ -1,10 +1,46 @@
 \documentclass{uhlvb}
 \usepackage{lipsum}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{multicol}
 
-\title{Title}
-\author{Author Name}
-\date{\today}
+\usepackage{calc}
+\newlength{\msize}
+\setlength{\msize}{\textwidth-1in}
+
+\newlength{\thirds}
+\setlength{\thirds}{3.525in}
+%\setlength{\thirds}{(\textwidth / 3)}
+\newlength{\thirdsspacing}
+\setlength{\thirdsspacing}{2pt}
+
+
+\newlength{\lesdoelwidth}
+\setlength{\lesdoelwidth}{31.5mm}
+\newlength{\lesinhoudwidth}
+\setlength{\lesinhoudwidth}{60mm}
+\newlength{\lesactiviteitwidth}
+\setlength{\lesactiviteitwidth}{158mm}
+\newlength{\lesspacingwidth}
+\setlength{\lesspacingwidth}{10mm}
+
+\colorlet{mygray}{black!20}
+
+\input{Lesvoorbereiding/info}
+%\usepackage{showframe}
 
 \begin{document}
-\lipsum
+    \begin{minipage}[b]{\msize}
+        \LARGE{\textbf{\color{red} LESVOORBEREIDINGSFORMULIER \\ EDUCATIEVE MASTEROPLEIDINGEN}}
+    \end{minipage}
+    \begin{minipage}[b]{1in}
+        \includegraphics[width=1in]{UHasselt_Logo.jpg}
+    \end{minipage}
+    
+    \input{Lesvoorbereiding/identificatie}
+    \input{Lesvoorbereiding/lesdoelen}
+    \input{Lesvoorbereiding/bronnen}
+    \input{Lesvoorbereiding/schema}
+    
+    \section{Bijlagen}
 \end{document}
