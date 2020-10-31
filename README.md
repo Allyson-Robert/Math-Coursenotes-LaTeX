@@ -12,7 +12,6 @@ Additional commands are provides:
 * \npar: Starts a new paragraph, is shorthand for \par\medskip
 * \course: Needed to display the course on the title page
 * \degree: Needed to show which to which degree the course belongs
-* \thispagestyle{toc}: Place this right after \tableofcontents to typeset it properly
 
 ## Coursework (for personal use)
 This document is most useful in a mathematical context as it provides numerous environments to typeset mathematical notes.
