@@ -72,50 +72,49 @@
 %     Titlepage     %
 %%%%%%%%%%%%%%%%%%%%%
 \renewcommand*{\maketitle}{%
-\begin{titlepage}
     \newgeometry{top=7.75cm, bottom=10mm, left=1in, right=1in}
-    \thispagestyle{empty}
-    \begin{tikzpicture}[remember picture,overlay]
-        \node[yshift=-7cm] at (current page.north west)
-          {\begin{tikzpicture}[remember picture, overlay]
-            \draw[fill=Red] (0,0) rectangle
-              (\paperwidth,7cm);
-           \end{tikzpicture}
-        };
-    \end{tikzpicture}
-    \begin{minipage}[b]{6cm}
-        \includegraphics[width=6cm]{Report/UHasselt_SES_Logo}
-    \end{minipage}
-    
-    \vspace{4cm}
-    \begin{minipage}{\textwidth}
-            \flushright
-            {\fontsize{35}{42}\selectfont\textbf{\textsf{\thecourse}}} \\
-            \LARGE \textbf{\thedegree} \\
-            {\color{Red}\textbf{\thetitle}} \\
-    \end{minipage}
-    
-    \vspace{2cm}
-    \begin{minipage}{\textwidth}
-            \flushright
-            \normalsize \theauthor \\ \thedate \\
-    \end{minipage}
-    
-    \vspace{2cm}
-    \begin{minipage}{\textwidth}
-            \flushright
-            \small Acadmiejaar 2020 - 2021 \\
-            \noindent\rule{\textwidth}{0.4pt}
-    \end{minipage}
-    \vfill
-    \hfill
-    \begin{minipage}[t]{3.5cm}
-        \includegraphics[width = 3.5cm]{Report/UHasselt_Logo_Tall}
-    \end{minipage}%
-    
+    \begin{titlepage}
+        \thispagestyle{empty}
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[yshift=-7cm] at (current page.north west)
+              {\begin{tikzpicture}[remember picture, overlay]
+                \draw[fill=Red] (0,0) rectangle
+                  (\paperwidth,7cm);
+               \end{tikzpicture}
+            };
+        \end{tikzpicture}
+        \begin{minipage}[b]{6cm}
+            \includegraphics[width=6cm]{Report/UHasselt_SES_Logo}
+        \end{minipage}
+        
+        \vspace{4cm}
+        \begin{minipage}{\textwidth}
+                \flushright
+                {\fontsize{35}{42}\selectfont\textbf{\textsf{\thecourse}}} \\
+                \LARGE \textbf{\thedegree} \\
+                {\color{Red}\textbf{\thetitle}} \\
+        \end{minipage}
+        
+        \vspace{2cm}
+        \begin{minipage}{\textwidth}
+                \flushright
+                \normalsize \theauthor \\ \thedate \\
+        \end{minipage}
+        
+        \vspace{2cm}
+        \begin{minipage}{\textwidth}
+                \flushright
+                \small Acadmiejaar 2020 - 2021 \\
+                \noindent\rule{\textwidth}{0.4pt}
+        \end{minipage}
+        \vfill
+        \hfill
+        \begin{minipage}[t]{3.5cm}
+            \includegraphics[width = 3.5cm]{Report/UHasselt_Logo_Tall}
+        \end{minipage}%
+    \end{titlepage}
+    \clearpage
     \restoregeometry
-    \cleardoublepage
-\end{titlepage}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -128,9 +127,9 @@
 \fancypagestyle{body}{
     \fancyhf{}
     
-    \setlength{\headheight}{0cm} 
+    \setlength{\headheight}{14pt} 
     \setlength{\headsep}{0.5cm} 
-    \setlength{\footskip}{1.7cm} 
+    \setlength{\footskip}{30pt} 
     
     \fancyhead[L]{
         \begin{tikzpicture}[remember picture,overlay]
@@ -149,33 +148,9 @@
     
     % Resize header\footer rule widths
     \renewcommand{\headrulewidth}{0pt}
+
 }
-% The fancy style was applied differently to the TOC, brute forced the issue
-\fancypagestyle{toc}{
-    \fancyhf{}
     
-    \setlength{\headheight}{0cm} 
-    \setlength{\headsep}{1cm} 
-    \setlength{\footskip}{-3.65cm} 
-    
-    \fancyhead[L]{
-        \begin{tikzpicture}[remember picture,overlay]
-            \node[yshift=-1cm] at (current page.north west)
-              {\begin{tikzpicture}[remember picture, overlay]
-                \draw[fill=Red] (0,0) rectangle
-                  (\paperwidth,1cm);
-               \end{tikzpicture}
-            };
-        \end{tikzpicture}
-    }
-    
-    % Footer definition
-    \fancyfoot[L]{\includegraphics[width = 3.5cm]{UHasselt_Logo_Flat}}
-    \fancyfoot[R]{\thepage~/~\pageref{LastPage}}
-    
-    % Resize header\footer rule widths
-    \renewcommand{\headrulewidth}{0pt}
-}
 \pagestyle{body}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Defined Environments   %
