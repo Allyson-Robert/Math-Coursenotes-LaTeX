@@ -132,7 +132,8 @@
     
     \setlength{\headheight}{14pt} 
     \setlength{\headsep}{0.5cm} 
-    \setlength{\footskip}{30pt} 
+    \setlength{\footskip}{15mm} 
+    \setlength{\textheight}{24cm}
     
     \fancyhead[L]{
         \begin{tikzpicture}[remember picture,overlay]
