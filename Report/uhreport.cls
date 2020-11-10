@@ -46,6 +46,9 @@
 \RequirePackage[margin=1in]{geometry}
 \RequirePackage{anyfontsize}
 
+% Bibliography apa style
+\RequirePackage{apacite}
+
 % References and links
 \RequirePackage[colorlinks=true, linktoc=all]{hyperref}
 \RequirePackage[noabbrev]{cleveref}
