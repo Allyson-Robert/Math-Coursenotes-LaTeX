@@ -105,13 +105,13 @@
         \vfill
         \begin{minipage}{\textwidth}
                 \flushright 
-                \normalsize \textbf{Docenten:} \\ \thementor  \\
+                \normalsize \textbf{Docent(en):} \\ \thementor  \\
         \end{minipage}
         
         \vfill
         \begin{minipage}{\textwidth}
                 \flushright 
-                \normalsize \textbf{Studente:} \\ \theauthor 
+                \normalsize \textbf{Student(en):} \\ \theauthor 
         \end{minipage}
         
         \vfill
