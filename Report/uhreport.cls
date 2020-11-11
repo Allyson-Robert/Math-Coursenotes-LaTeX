@@ -63,6 +63,10 @@
 % No indentation
 \setlength\parindent{0pt}
 
+% Defince \mentor{} element
+\newcommand*{\mentor}[1]{\gdef\thementor{#1}}
+\newcommand*{\thementor}{Insert \textbackslash mentor\{\} below \textbackslash date\{\}}
+
 % Defince \course{} element
 \newcommand*{\course}[1]{\gdef\thecourse{#1}}
 \newcommand*{\thecourse}{Insert \textbackslash course\{\} below \textbackslash date\{\}}
@@ -90,7 +94,7 @@
             \includegraphics[width=6cm]{Report/UHasselt_SES_Logo}
         \end{minipage}
         
-        \vspace{4cm}
+        \vfill
         \begin{minipage}{\textwidth}
                 \flushright
                 {\fontsize{35}{42}\selectfont\textbf{\textsf{\thecourse}}} \\
@@ -98,15 +102,22 @@
                 {\color{Red}\textbf{\thetitle}} \\
         \end{minipage}
         
-        \vspace{2cm}
+        \vfill
         \begin{minipage}{\textwidth}
-                \flushright
-                \normalsize \theauthor \\ \thedate \\
+                \flushright 
+                \normalsize \textbf{Docenten:} \\ \thementor  \\
         \end{minipage}
         
-        \vspace{2cm}
+        \vfill
+        \begin{minipage}{\textwidth}
+                \flushright 
+                \normalsize \textbf{Studente:} \\ \theauthor 
+        \end{minipage}
+        
+        \vfill
         \begin{minipage}{\textwidth}
                 \flushright
+                \normalsize \thedate \\
                 \small Acadmiejaar 2020 - 2021 \\
                 \noindent\rule{\textwidth}{0.4pt}
         \end{minipage}
