@@ -42,9 +42,13 @@
 \RequirePackage{mdframed}
 \RequirePackage{tocloft}
 
+% When will I not need math or physics
+\RequirePackage{physics}
+\RequirePackage{amsmath}
+
 % References and links
 \RequirePackage[colorlinks=true, linktoc=all]{hyperref}
-\RequirePackage[noabbrev]{cleveref}
+\RequirePackage[noabbrev,dutch]{cleveref}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Definition of things   %
