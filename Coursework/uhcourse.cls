@@ -3,7 +3,7 @@
 
 % Declares itself
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{uhcourse}[2019/02/06 A course class suitable for Hasselt University coursework]
+\ProvidesClass{uhcourse}[2021/05/15 A course class suitable for Hasselt University coursework]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %         Packages         %
