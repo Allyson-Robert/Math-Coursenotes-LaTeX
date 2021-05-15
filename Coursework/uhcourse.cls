@@ -28,6 +28,7 @@
 \RequirePackage{helvet}
 \RequirePackage{chngcntr}
 \RequirePackage[normalem]{ulem}
+\RequirePackage[style=english]{csquotes}
 
 % Improvements
 \RequirePackage{enumitem}
