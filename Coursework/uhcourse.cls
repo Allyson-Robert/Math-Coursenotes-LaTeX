@@ -98,26 +98,38 @@
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{1pt}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Defined Environments   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Have a common counter for all custom numbered environments
+\newcounter{envctr}[section]
+\renewcommand{\theenvctr}{\thesection.\arabic{envctr}}
+
 %%%%%%%%%%%%%%%%%%%%%%%
 % Example Environment %
+
+% Define the counter 
+\makeatletter
+    \let\c@example\c@envctr
+    \def\p@example{\p@envctr}
+    \def\theexample{\theenvctr}
+\makeatother
+
+% Defines cref names
+\crefname{example}{voorbeeld}{voorbeelden}
+\Crefname{example}{Voorbeeld}{Voorbeelden}
 
 % Colours
 \definecolor{TFTitleColor}{RGB}{0, 0, 0}
 \definecolor{TFFrameColor}{RGB}{189, 189, 255}
 \definecolor{shadecolor}{RGB}{255, 230, 230}
 
-% New counter
-\newcounter{example}[section]
-\renewcommand{\theexample}{\thesection.\arabic{example}}
-
 % Environment
 \newenvironment{example}[1]{
     \refstepcounter{example}\par
-    \begin{titled-frame}{Voorbeeld~\theexample ~#1}
+    \begin{titled-frame}{Voorbeeld~\theenvctr ~#1}
 }{
     \end{titled-frame}
 }
@@ -125,20 +137,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % Definition Environment %
 
+% Define the counter 
+\makeatletter
+    \let\c@definition\c@envctr
+    \def\p@definition{\p@envctr}
+    \def\thedefinition{\theenvctr}
+\makeatother
+
+% Defines cref names
+\crefname{definition}{definitie}{definities} 
+\Crefname{definition}{Definitie}{Definities}
+
 % Colours
 \definecolor{myred}{RGB}{255, 230, 230}
 \definecolor{mydarkred}{RGB}{255, 133, 133}
-
-% Define counters
-\newcounter{definition}[section]
-\renewcommand{\thedefinition}{\thesection.\arabic{definition}}
 
 % Define environment
 \newenvironment{definition}[1]{%
     \refstepcounter{definition}\par
     \mdfsetup{%
         frametitle={%
-            \uline{\textbf{Definitie~\thedefinition:~#1}}
+            \uline{\textbf{Definitie~\theenvctr:~#1}}
         }
     }%
     \mdfsetup{ innertopmargin=10pt,linecolor=mydarkred,%
@@ -147,9 +166,6 @@
         }{
     \end{mdframed}
 }
-% Defines cref names
-\crefname{definition}{definitie}{definities} 
-\Crefname{definition}{Definitie}{Definities}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % Exercise Environment %
@@ -164,34 +180,47 @@
 } 
 \makeatother
 
-% Define counters
-\newcounter{exercise}[section]
-\renewcommand{\theexercise}{\thesection.\arabic{exercise}}
+% Define the counter 
+\makeatletter
+    \let\c@exercise\c@envctr
+    \def\p@exercise{\p@envctr}
+    \def\theexercise{\theenvctr}
+\makeatother
+
+% Defines cref names
+\crefname{exercise}{oefening}{oefeningen}
+\Crefname{exercise}{Oefening}{Oefeningen}
 
 % Define environment
 \newenvironment{exercise}[2][]{
     \refstepcounter{exercise}
     \ifx\\#1\\
-    	\addcontentsline{exs}{subsection}{Oefening ~\theexercise ~#2}
+    	\addcontentsline{exs}{subsection}{Oefening ~\theenvctr ~#2}
     \else
-    	\addcontentsline{exs}{subsection}{Oefening ~\theexercise ~#1}
+    	\addcontentsline{exs}{subsection}{Oefening ~\theenvctr ~#1}
     \fi
-   	\begin{leftbar}{\noindent \textbf{Oefening~\theexercise ~#2}}\npar
+   	\begin{leftbar}{\noindent \textbf{Oefening~\theenvctr ~#2}}\npar
 }{
     \end{leftbar}\npar
 }
 
-
 %%%%%%%%%%%%%%%%%%%%%%%
 % Theorem Environment %
+
+% Define the counter 
+\makeatletter
+    \let\c@theorem\c@envctr
+    \def\p@theorem{\p@envctr}
+    \def\thetheorem{\theenvctr}
+\makeatother
+
+% Defines cref names
+\crefname{theorem}{stelling}{stellingen}
+\Crefname{theorem}{Stelling}{Stellingen}
 
 % Colours
 \definecolor{mygreen}{RGB}{228, 251, 240}
 \definecolor{mydarkgreen}{RGB}{78, 228, 156}
-
-% Define counters
-\newcounter{theorem}[section]
-\renewcommand{\thetheorem}{\thesection.\arabic{theorem}}
 
 % Define environment
 \newenvironment{theorem}[2][]{%
@@ -199,13 +228,13 @@
     \ifx\\#1\\
         \mdfsetup{%
             frametitle={%
-                \textbf{\textit{\uline{Theorem~\thetheorem:~#1}}}
+                \textbf{\textit{\uline{Stelling~\theenvctr:~#1}}}
             }
         }%
     \else
         \mdfsetup{%
             frametitle={%
-                \textbf{\textit{\uline{Theorem~\thetheorem:~#2}}}
+                \textbf{\textit{\uline{Stelling~\theenvctr:~#2}}}
             }
         }%
         \label{th:#1}
@@ -217,10 +246,6 @@
     \end{mdframed}
 }
 
-% Defines cref names
-\crefname{theorem}{theorem}{theorems}
-\Crefname{theorem}{Theorem}{Theorems}
-
 %%%%%%%%%%%%%%%%%%%%%
 % Proof environment %
 \newcommand{\bref}[1]{
@@ -231,7 +256,7 @@
 \newenvironment{proof}[1]{
     \mdfsetup{%
         frametitle={%
-            \textbf{\textit{\uline{Proof of theorem\bref{th:#1}}}}
+            \textbf{\textit{\uline{Bewijs voor stelling \bref{th:#1}}}}
         }
     }%
     \mdfsetup{innertopmargin=10pt,linecolor=mydarkgreen,%
@@ -250,3 +275,4 @@
         \end{enumerate}
     \end{multicols}
 }
+
