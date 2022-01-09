@@ -109,7 +109,7 @@
 \renewcommand*{\maketitle}{%
     \begin{titlepage}
         \thispagestyle{empty}
-        \noindent\includegraphics[width=6cm]{UHasselt_Logo}
+        \noindent\includegraphics[width=6cm]{UHasselt_large}
         \vspace{20mm}
         \begin{adjustwidth}{0in}{}
                 \Large
