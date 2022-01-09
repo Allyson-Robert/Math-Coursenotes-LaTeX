@@ -10,7 +10,6 @@ Additional commands are provides:
 
 * \npar: Starts a new paragraph, is shorthand for \par\medskip
 * \course: Needed to display the course on the title page
-* \degree: Needed to show which to which degree the course belongs
 * \npar: Starts a new paragraph, is shorthand for \par\medskip
 * \listofexercises: Places a list of all exercises, similar to the list of figures
 
