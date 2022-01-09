@@ -82,6 +82,10 @@
 % Defince \course{} element
 \newcommand*{\course}[1]{\gdef\thecourse{#1}}
 \newcommand*{\thecourse}{Insert \textbackslash course\{\} below \textbackslash date\{\}}
+
+% Defince \shorttitle{} element
+\newcommand*{\shorttitle}[1]{\gdef\theshorttitle{#1}}
+\newcommand*{\theshorttitle}{Insert \textbackslash shorttitle\{\} below \textbackslash date\{\}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Definition of the footer %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
