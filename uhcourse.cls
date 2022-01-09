@@ -29,6 +29,7 @@
 \RequirePackage{chngcntr}
 \RequirePackage[normalem]{ulem}
 \RequirePackage[style=english]{csquotes}
+\RequirePackage{changepage}
 
 % Improvements
 \RequirePackage{enumitem}
@@ -78,6 +79,9 @@
 % Switch to uppercase
 \newcommand{\upperC}[1]{\expandafter\MakeUppercase\expandafter{#1}}
 
+% Defince \course{} element
+\newcommand*{\course}[1]{\gdef\thecourse{#1}}
+\newcommand*{\thecourse}{Insert \textbackslash course\{\} below \textbackslash date\{\}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Definition of the footer %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -99,6 +103,33 @@
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{1pt}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        Front Page        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand*{\maketitle}{%
+    \begin{titlepage}
+        \thispagestyle{empty}
+        \noindent\includegraphics[width=6cm]{UHasselt_Logo}
+        \vspace{20mm}
+        \begin{adjustwidth}{0in}{}
+                \Large
+                \thecourse
+        \end{adjustwidth}
+        \vspace{5mm}
+        \begin{center}
+            \LARGE
+            \textbf{\THETITLE}
+        \end{center}
+        \vfill
+        \begin{adjustwidth}{0in}{}
+                \Large
+                \textbf{AUTHOR:}\\
+                \theauthor
+        \end{adjustwidth}
+        \vspace{30mm}
+    \end{titlepage}
+    \clearpage
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   Defined Environments   %
