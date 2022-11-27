@@ -63,4 +63,5 @@ Must pass the number of columns.
 Further customisation is not possible, use multicols and enumerate manually in such cases.
 
 ## UHReport
-For reports consider the template over at https://github.com/Allyson-Robert/UHasselt-Reports-LaTeX-Template
+For reports consider the template over at https://github.com/Allyson-Robert/UHasselt-Reports-LaTeX-Template.
+Physics students looking to write a report should go to the appropriate [paper](https://github.com/Allyson-Robert/UHasselt_Physics_Paper_Template) or [report](https://github.com/Allyson-Robert/UHasselt_Physics_Report_Template) templates
