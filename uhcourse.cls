@@ -97,7 +97,7 @@
 \setlength{\headheight}{40pt} 
 
 % Header definition
-\fancyhead[L]{\includegraphics[width = 3.5cm]{UHasselt_Logo}}
+\fancyhead[L]{\includegraphics[width = 3.5cm]{Logo/UH_150-35.jpg}}
 \fancyhead[R]{\THETITLE \\ \theauthor}
 
 % Footer definition
@@ -113,7 +113,7 @@
 \renewcommand*{\maketitle}{%
     \begin{titlepage}
         \thispagestyle{empty}
-        \noindent\includegraphics[width=6cm]{UHasselt_large}
+        \noindent\includegraphics[width=6cm]{Logo/UH_150-108.png}
         \vspace{20mm}
         \begin{adjustwidth}{0in}{}
                 \Large
