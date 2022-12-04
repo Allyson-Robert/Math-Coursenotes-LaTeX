@@ -1,7 +1,8 @@
-# UHasselt-Course-LaTeX-Templates
-LaTeX Templates for Hasselt University coursework (*uhcourse*) and notes
+# Course-LaTeX-Templates
+LaTeX Templates to write up coursework (*uhcourse*) and notes.
 Provides a LaTeX documentclass defining page layout, environments and commands.
-This document is most useful in a mathematical context as it provides numerous environments to typeset mathematical notes.
+The intended use for this document class is to be used to write mathematical notes, coursework, and/or handouts either for yourself or for your students.
+The class provides numerous environments to typeset mathematical notes using colours to differentiate between different types of content (example, defintion, exercises and proofs).
 
 Dutch is the assumed language.
 

@@ -3,7 +3,7 @@
 
 % Declares itself
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{uhcourse}[2021/05/15 A course class suitable for Hasselt University coursework]
+\ProvidesClass{mathcourse}[2021/05/15 A course class suitable for Hasselt University coursework]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %         Packages         %
@@ -97,7 +97,7 @@
 \setlength{\headheight}{40pt} 
 
 % Header definition
-\fancyhead[L]{\includegraphics[width = 3.5cm]{Logo/UH_150-35.jpg}}
+\fancyhead[L]{\includegraphics[width = 3.5cm]{Logo/150w-35h.jpg}}
 \fancyhead[R]{\THETITLE \\ \theauthor}
 
 % Footer definition
@@ -113,7 +113,7 @@
 \renewcommand*{\maketitle}{%
     \begin{titlepage}
         \thispagestyle{empty}
-        \noindent\includegraphics[width=6cm]{Logo/UH_150-108.png}
+        \noindent\includegraphics[width=6cm]{Logo/150w-108h.png}
         \vspace{20mm}
         \begin{adjustwidth}{0in}{}
                 \Large
